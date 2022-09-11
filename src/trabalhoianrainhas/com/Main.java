@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-	//MENU
 	public static void main(String[] args)throws IOException, ClassNotFoundException {
 		int answer=-1;
 		int nq;
@@ -28,7 +27,7 @@ public class Main {
 			
 			
 	        if(answer==1){
-	        	do{System.out.print("Dê o número primo maior que x:");
+	        	do{System.out.print("Dê o número maior que 3:");
 	        	String input = br.readLine();
 	        	nq=Integer.parseInt(input);
 	        	}while(nq<=3);
@@ -38,28 +37,28 @@ public class Main {
 	        		sol.hillclimb();
 	        		
 	       	}
-	        	k=sol.getInits();/////////////
+	        	k=sol.getInits();
 	    		k=k/10;
-	    		ttime=sol.getTime();/////////////
+	    		ttime=sol.getTime();
 	    		ttime=ttime/10;
-	    		System.out.println("-->Resultados do LocalBeam:");
-	    		System.out.println("------------------->Número médio de grades de inicialização:"+k);/////////////
+	    		System.out.println("------------------->Resultados:");
+	    		System.out.println("------------------->Número médio de grades de inicialização:"+k);
 	    		System.out.println("------------------->Número médio de tempo:"+ttime);
-	        	for (int i=0;i<10;i++) {////////////////
+	        	for (int i=0;i<10;i++) {
 	        		System.out.print("\n----Loop----=="+i);
-	        		sol.constraintSAT();//Meta to constraint
+	        		sol.constraintSAT();
 	        	}
-	        	System.out.println("-->Satisfação da restrição de resultados:");
-	    		ttime=sol.getTttime();////////////////////
+	        	System.out.println("------------------->Satisfação da restrição de resultados:");
+	    		ttime=sol.getTttime();
 	    		ttime=ttime/10;
-	    		k=sol.getLoads();/////////
+	    		k=sol.getLoads();
 	    		k=k/10;
 	    		
-	    		System.out.println("------------------->Número médio de cargas:"+k);///////////
+	    		System.out.println("------------------->Número médio de cargas:"+k);
 	    		System.out.println("------------------->Número médio de tempo:"+ttime);
 	        	flag=false;
 	        }if(answer==2)
-	        	flag=true;//Exodos
+	        	flag=true;
 		}
 		System.out.println("\n\nFim do programa\nGOODBYE\n");
 	}

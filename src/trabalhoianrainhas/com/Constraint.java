@@ -1,7 +1,5 @@
 package trabalhoianrainhas.com;
 
-import java.util.Random;
-
 public class Constraint {
 
 	private int[][] grid;
@@ -45,7 +43,7 @@ public class Constraint {
     	System.out.println("----------------------------------------\n");
 		for(int i=0; i<N; i++) {
 		    for(int j=0; j<N; j++) {
-		    	char x = (grid[i][j]>0) ? 'Q' : '-';
+		    	char x = (grid[i][j]>0) ? 'R' : '-';
 		    	System.out.print("| "+x+" ");
 		    }
 	    	System.out.println("|");
